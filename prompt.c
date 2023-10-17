@@ -4,5 +4,16 @@ function that displays the prompt shown in the terminal
 */
 void display_prompt(void)
 {
-    my_printf("nueldom$");
+    char input;
+
+    while (1)
+        {
+            my_printf("nueldom$");
+            if (fgets(input, sizeof(input), stdin) == NULL)
+            {
+                printf("EOF..Exiting..\n");
+                break;
+            }
+        }
+    return (0);
 }
