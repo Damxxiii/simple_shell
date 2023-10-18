@@ -10,10 +10,7 @@
 #include <string.h>
 
 
-void my_printf(const char* format);
-void display_prompt(void);
-void execute_command(const char* command);
-void parse_command(char* command, size_t size);
-
+char *getenv(const char *name);
+int main(void);
 #endif
 

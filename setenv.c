@@ -7,19 +7,27 @@
 
 char *getenv(const char *name)
 {
-	char* variable = "PATH";
-	char* value = getenv(variable);
+	extern char **environ;
+	int i;
+	char *token;
 
-	if (value != NULL)
+	while (1)
 	{
-		printf("%s=%s\n", variable, value);
+		token = strtok(environ[i], "=");
+		if (strcmp(token, name) == 0)
+		{
+			return (strtok(NULL, "="));
+		}
+		i++;
 	}
-	else
-	{
-		printf(stderr, "Error: Variable %s not found\n", variable);
-	}
-	
-	return (0);
+	return (NULL);
+}
+
+void main(void)
+{
+	char * path = "Home";
+
+	printf("%s\n", path);
 }
 
 /**
