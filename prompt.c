@@ -11,9 +11,7 @@ int main(void)
 
 	buf = malloc(sizeof(char));
 	printf("Welcome, Enter your name");
-	getline(&buf, &n, stdin);
 	printf("Name : %s", buf);
-	printf("Buffer size: %ld\n", n);
 
 	free(buf);
 

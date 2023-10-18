@@ -1,39 +1,11 @@
 
 #include "shell.h"
+
 /**
- * getenv - 
+ * setenv - defines an environment variable
+ * and assign a value to it
  *
- */
-
-char *getenv(const char *name)
-{
-	extern char **environ;
-	int i;
-	char *token;
-
-	while (1)
-	{
-		token = strtok(environ[i], "=");
-		if (strcmp(token, name) == 0)
-		{
-			return (strtok(NULL, "="));
-		}
-		i++;
-	}
-	return (NULL);
-}
-
-void main(void)
-{
-	char * path = "Home";
-
-	printf("%s\n", path);
-}
-
-/**
- * setenv -
- * @name:
- * Return:
+ * Return: 0 on success
  */
 
 int setenv(const char *name, const char *value, int overwrite)
@@ -45,15 +17,16 @@ int setenv(const char *name, const char *value, int overwrite)
 	}
 
 	char *env_var = malloc(strlen(name) + strlen(value) + 2);
-	printf(env_var, "%s=%s", name, value);
+	printf(env_var, "%s\n", name, value);
 	putenv(env_var);
 	return 0;
 }
 
 /**
- * unsetenv - 
- * @name:
- * Return:
+ * unsetenv - deletes an environment variable
+ * from the environment of the calling process.
+ *
+ * Return: 0 on success otherwise -1
  */
 
 int unsetenv(const char *name)
@@ -65,7 +38,7 @@ int unsetenv(const char *name)
 	}
 
 	char *env_var = malloc(strlen(name) + 2);
-	printf(env_var, "%s=", name);
+	printf(env_var, "%s\n", name);
 	putenv(env_var);
 	
 	return 0;
