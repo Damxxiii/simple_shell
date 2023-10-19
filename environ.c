@@ -1,4 +1,9 @@
 #include "shell.h"
+/**
+ * main - prints current environment
+ *
+ * Return: 0 on success
+ */
 
 extern char **environ;
 

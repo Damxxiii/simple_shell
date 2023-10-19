@@ -1,4 +1,9 @@
 #include "shell.h"
+/**
+ * main - handles path
+ *
+ * Return: 0 on success
+ */
 
 
 int main(void)
@@ -15,7 +20,7 @@ int main(void)
 		if (access(max_path != -1))
 		{
 			char *argv[] = (max_path, NULL);
-			execve(#max_path, argv, NULL);
+			execve(max_path, argv, NULL);
 			break;
 		}
 

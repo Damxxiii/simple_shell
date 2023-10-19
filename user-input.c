@@ -1,8 +1,10 @@
 #include "shell.h"
 
-/*
-parse_command()
-a function that reads from use input and executes the eof character
+/**
+ * parse_command - a function that reads from use input
+ * and executes the eof character
+ *
+ * Return: 0 on success
 */
 
 void parse_command(char *command, size_t size)

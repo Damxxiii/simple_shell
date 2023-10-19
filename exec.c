@@ -1,4 +1,10 @@
 #include "shell.h"
+/**
+ * execmd - executes command
+ * @ac: argument count
+ * @argv: argument vector
+ * Return: 0 on success
+ */
 
 void execmd(char *argv[])
 {
@@ -14,4 +20,5 @@ void execmd(char *argv[])
 			perror("Denied:");
 		}
 	}
+	return (0);
 }

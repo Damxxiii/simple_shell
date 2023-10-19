@@ -6,14 +6,10 @@
  */
 int main(void)
 {
-	char *buf;
-	size_t n;
+	char str;
 
-	buf = malloc(sizeof(char));
 	printf("Welcome, Enter your name");
-	printf("Name : %s", buf);
-
-	free(buf);
+	printf("Name : %s", str);
 
 	return (0);
 }
