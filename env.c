@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * getenv - function returns a pointer to the string
+ * get_env - function returns a pointer to the string
  * containing the value for the specified
  * variable name in the current environment
  *
@@ -44,7 +44,7 @@ int main(void)
 
 int setenv(const char *name, const char *value, int overwrite)
 {
-	if (getenv(name) != NULL && overwrite == 0)
+	if (get_env(name) != NULL && overwrite == 0)
 	{
 		printf(stderr, "Variable %s exists\n", name);
 		return (-1);
@@ -65,7 +65,7 @@ int setenv(const char *name, const char *value, int overwrite)
 
 int unsetenv(const char *name)
 {
-	if (getenv(name) == NULL)
+	if (get_env(name) == NULL)
 	{
 		printf(stderr, "Variable %s not found\n", name);
 		return (-1);
@@ -78,4 +78,3 @@ int unsetenv(const char *name)
 	return (0);
 }
 
-}
