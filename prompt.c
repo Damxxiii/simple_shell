@@ -1,15 +1,8 @@
 #include "shell.h"
-/**
- * main - prints a command prompt
- *
- * Return: void
- */
-int main(void)
+/*
+function that displays the prompt shown in the terminal
+*/
+void display_prompt(void)
 {
-	char str;
-
-	printf("Welcome, Enter your name");
-	printf("Name : %s", str);
-
-	return (0);
+    my_printf("nueldom$");
 }
