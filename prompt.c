@@ -1,15 +1,24 @@
 #include "shell.h"
 /**
  * main - prints a command prompt
+ * @ac: argument count
+ * @argv: argument vector
  *
  * Return: void
  */
-int main(void)
+
+int main(int ac, char **argv)
 {
-	char str;
+	char *Pprompt = "(Dom&Nuel) $ ";
+	char *lineptr;
+	unsigned int n = 0;
 
-	printf("Welcome, Enter your name");
-	printf("Name : %s", str);
+	printf("%s", Pprompt);
+	getline(&lineptr, &n, stdin);
+	printf("%s\n", lineptr);
 
+	free(lineptr);
 	return (0);
 }
+
+
