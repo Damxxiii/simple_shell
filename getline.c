@@ -1,21 +1,29 @@
 #include "shell.h"
 /**
  * main - gets line size
- *
+ * 
  * Return: buffer size
  */
+
 int main(void)
 {
-	char *buf;
-	size_t n = 10;
+	char *buffer;
+	unsigned int n = 10;
+	unsigned int characters;
 
-	buf = malloc(sizeof(char) * 10);
-	printf("Welcome, Enter your name");
-	getline(&buf, &n, stdin);
-	printf("Name : %s", buf);
-	printf("Buffer size: %ld\n", n);
+	buffer = malloc(n * sizeof(char));
+	if (buffer == NULL)
+	{
+		perror("buffer error \n");
+		exit(1);
+	}
 
-	free(buf);
+	printf("Type: ");
+	characters = getline(&buffer, &n, stdin);
+	printf("%lu characters read.\n", characters);
+	printf("You typed: '%s'\n", buffer);
 
-	return (0);
+	free(buffer);
+
+	return 0;
 }
