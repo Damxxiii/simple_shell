@@ -1,4 +1,5 @@
 #include "shell.h"
+<<<<<<< HEAD
 /**
  * main - prints a command prompt
  * @ac: argument count
@@ -19,6 +20,14 @@ int main(int ac, char **argv)
 
 	free(lineptr);
 	return (0);
+=======
+/*
+function that displays the prompt shown in the terminal
+*/
+void display_prompt(void)
+{
+    my_printf("nueldom$");
+>>>>>>> 34660a9754589c6c7b934751b36de3d37bfa8c68
 }
 
 

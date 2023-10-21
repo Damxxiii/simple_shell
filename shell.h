@@ -1,14 +1,18 @@
-
 #ifndef HEADER_FILE
 #define HEADER_FILE
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/types.h>
-#include <unistd.h>
-#include <stdbool.h>
 #include <string.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+void execute_cmd(char **argv);
+char *get_location(char *command);
+void my_printf(const char* format);
+void display_prompt(void);
 
+<<<<<<< HEAD
 typedef struct Alias
 {
 	char name[MAX_NAME_LENGTH];
@@ -28,5 +32,6 @@ void execute_command(const char* command);
 void add_alias(Alias** head, const char* name, const char* value);
 void print_aliases(Alias* head);
 void update_aliases(Alias** head, const char* names[], const char* values[]);
+=======
+>>>>>>> 34660a9754589c6c7b934751b36de3d37bfa8c68
 #endif
-
