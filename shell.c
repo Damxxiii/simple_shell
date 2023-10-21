@@ -29,7 +29,7 @@ int main(int ac, char **argv)
         lineptr_copy = malloc(sizeof(char) * nchars_read);
         if (lineptr_copy == NULL)
         {
-            perror("tsh: memory allocation error");
+            perror("hsh: memory allocation error");
             return (-1);
         }
         /* copy lineptr to lineptr_copy */
