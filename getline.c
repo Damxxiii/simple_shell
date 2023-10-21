@@ -18,10 +18,10 @@ int main(void)
 		exit(1);
 	}
 
-	printf("Type: ");
+	my_printf("Type: ");
 	characters = getline(&buffer, &n, stdin);
-	printf("%lu characters read.\n", characters);
-	printf("You typed: '%s'\n", buffer);
+	my_printf("%lu characters read.\n", characters);
+	my_printf("You typed: '%s'\n", buffer);
 
 	free(buffer);
 

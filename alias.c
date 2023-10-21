@@ -29,7 +29,7 @@ void print_aliases(Alias* head)
 
 	while (A1 != NULL)
 	{
-		printf("%s='%s'\n", A1->name, A1->value);
+		my_printf("%s='%s'\n", A1->name, A1->value);
         A1 = A1->next;
     }
 }
