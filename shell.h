@@ -27,6 +27,7 @@ char *getenv(const char *name);
 int setenv(const char *name, const char *value, int overwrite);
 int unsetenv(const char *name);
 extern char **environ;
+int main(int argc, char *argv[]);
 void add_alias(Alias** head, const char* name, const char* value);
 void print_aliases(Alias* head);
 void update_aliases(Alias** head, const char* names[], const char* values[]);
